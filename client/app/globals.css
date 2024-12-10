@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+/* Add this to your global styles (e.g., styles/globals.css) */
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.user-message {
+  text-align: right;
+  background-color: #d4f7d4;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 10px;
+}
+
+.bot-message {
+  text-align: left;
+  background-color: #f1f1f1;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 10px;
+}
+
+.input-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.input-section input {
+  width: 80%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.input-section button {
+  width: 15%;
+  background-color: #4CAF50;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input-section button:hover {
+  background-color: #45a049;
+}
+
